@@ -2,6 +2,6 @@ proj: Y2Basic
 181014
 framework: yii
 
-remty2b: https://github.com/Candy128x/Y2Basic.git
+remty2b https://github.com/Candy128x/Y2Basic.git
 brny2b
 brny2bo
