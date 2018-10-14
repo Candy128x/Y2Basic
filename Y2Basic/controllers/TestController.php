@@ -9,8 +9,9 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\DemoForm;
 
-class SiteController extends Controller
+class TestController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -129,5 +130,23 @@ class SiteController extends Controller
     public function actionHello()
     {
         return 'Hello Developer..';
+    }
+
+    public function actionHelloPhp()
+    {
+        return 'Hello PHP Developer..';
+    }
+
+    public function actionDemoform()
+    {
+        $model = new DemoForm();
+
+        if($model->load(Yii::$app->request->post()) && $model->validate())
+        {
+            //all are good
+            Yii::$app->session->setFlash('success', 'You have Enter Data Correctly');
+        }
+        
+        return $this->render('demoForm', ['model'=>$model]);
     }
 }
