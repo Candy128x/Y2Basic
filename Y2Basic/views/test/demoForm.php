@@ -1,4 +1,5 @@
 <?php
+
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 ?>
@@ -15,3 +16,4 @@ if(Yii::$app->session->hasFlash('success'))
 <?= $form->field($model, 'email'); ?>
 
 <?= Html::submitButton('Submit', ['class'=>'btn btn-success']); ?>
+<?php $form = ActiveForm::end(); ?>

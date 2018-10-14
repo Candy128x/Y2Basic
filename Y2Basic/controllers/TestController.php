@@ -137,7 +137,7 @@ class TestController extends Controller
         return 'Hello PHP Developer..';
     }
 
-    public function actionDemoform()
+    public function actionDemoForm()
     {
         $model = new DemoForm();
 
